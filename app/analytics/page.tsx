@@ -215,7 +215,7 @@ export default function AnalyticsPage() {
                     ))}
                   </Pie>
                   <Tooltip
-                    formatter={(value: number) => `¥${value.toLocaleString()}`}
+                    formatter={(value: number | undefined) => `¥${(value || 0).toLocaleString()}`}
                     contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151' }}
                   />
                 </PieChart>
@@ -254,7 +254,7 @@ export default function AnalyticsPage() {
                 <XAxis dataKey="month" stroke="#9ca3af" />
                 <YAxis stroke="#9ca3af" />
                 <Tooltip
-                  formatter={(value: number) => `¥${value.toLocaleString()}`}
+                  formatter={(value: number | undefined) => `¥${(value || 0).toLocaleString()}`}
                   contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151' }}
                 />
                 <Legend />
