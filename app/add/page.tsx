@@ -60,7 +60,7 @@ export default function AddTransactionPage() {
       if (type === 'income') {
         const { data: goalData } = await supabase
           .from('goals')
-          .select('current_amount')
+          .select('current_amount, id')
           .limit(1)
           .single()
 
